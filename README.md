@@ -1,4 +1,4 @@
-# gpt-model-bert-model-news-classification
+# Comparing Transformers: GPT and BERT for News Classification with Fine-Tuning and Few-shot Learning
 
 ## Published Paper
 * **Conference**: [IC-BIM: International Conference on Business Intelligence & Modelling](https://link.springer.com/conference/icbim) | Part of the book series: [Springer Proceedings in Business and Economics (SPBE)](https://www.springer.com/series/11960)
