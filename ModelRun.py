@@ -26,6 +26,7 @@ def run_sentiment(model, model_id, dataset, identifier):
 
             # Loop through each row in the CSV file
             for row in csvreader:
+                # TODO! κάπου εδώ σταμάτησα. βάλε το title and body και διόρθωσε το prompt να είναι ίδιο με το training. τρέχτο, πάρε τα αποτελέσματα και κάνε την data analysis. σβήσε τα αρχεία που δεν χρησιμοποιούνται.
                 comment = row[0]
                 comment = comment[:200]
                 print(f"Comment: {comment}")
@@ -54,8 +55,5 @@ def run_sentiment(model, model_id, dataset, identifier):
 
             print(f"Predictions added to the 'prediction' column in {output_file}")
 
-# Base models
-# run_sentiment('gpt', 'gpt-3.5-turbo', 'datasets/reddit_test_dataset.csv', 'reddit')
-# run_sentiment('llama', 'meta/llama-2-70b-chat', 'datasets/reddit_test_dataset.csv', 'reddit')
 # Fine-tuned models
-# run_sentiment('gpt', 'ft:gpt-3.5-turbo-1106:personal::8ftGgVPT', 'datasets/twitter_test_dataset.csv', 'twitter')
+run_sentiment('gpt', 'ft:gpt-3.5-turbo-1106:personal::8sbvCChh', 'datasets/test_dataset.csv', 'news')
