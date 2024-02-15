@@ -270,8 +270,8 @@ class DBmethods:
         # Iterate over each row in the DataFrame
         for index, row in df.iterrows():
             category = row['category']
-            title = row['title']
-            body = row['body']
+            title = self.preprocess_text(row['title'])
+            body = self.preprocess_text(row['body'])
 
             if model == 'llama':
                 llama_prompt = 'You are article classification bot.\n'+'This is the title and body of an article '+str(title)+' '+str(body)+'. Classify it in the appropriate category. Categories:\n' + str(
